@@ -1,11 +1,11 @@
-# JX-Agent — Open-Source AI Agent Framework
+# HyperAgent — Open-Source AI Agent Framework
 
 <div align="center">
 
 [![GPL v3 License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](package.json)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/JX-Agent/JX-Agent/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/JX-Agent/JX-Agent?style=social)](https://github.com/JX-Agent/JX-Agent)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/13717930620-alt/hyperagent/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/13717930620-alt/hyperagent?style=social)](https://github.com/13717930620-alt/hyperagent)
 
 </div>
 
@@ -21,11 +21,11 @@
 
 ## What Is This?
 
-JX-Agent is an open-source framework that gives your computer its own AI agent. Tell it what you want, and it makes it happen.
+HyperAgent is an open-source framework that gives your computer its own AI agent. Tell it what you want, and it makes it happen.
 
 ```
 You say: "Organize my desktop files by type into folders"
-→ JX-Agent: Scans desktop → Identifies file types → Creates folders → Moves files → Reports results
+→ HyperAgent: Scans desktop → Identifies file types → Creates folders → Moves files → Reports results
 ```
 
 It works with DeepSeek, GLM, Qwen, MiniMax, or entirely offline using its built-in engine.
@@ -66,7 +66,7 @@ Then just talk to it: "Check my CPU usage" or "Create a file called test.txt"
 ## Project Structure
 
 ```
-JX-Agent/
+HyperAgent/
 ├── HyperAgent_Main.js             # Entry point
 ├── HyperAgent_Config.js           # Configuration
 ├── HyperAgent_Learning.js         # Self-learning system
@@ -201,7 +201,7 @@ This is not a finished product. This is a **framework** — a skeleton — that 
 
 ## Version
 
-**Current release: v5.2.0** — This is an early-stage skeleton. The architecture is foundational and every component is open for rethinking. See the [Releases page](https://github.com/JX-Agent/JX-Agent/releases) for changelog.
+**Current release: v5.2.0** — This is an early-stage skeleton. The architecture is foundational and every component is open for rethinking. See the [Releases page](https://github.com/13717930620-alt/hyperagent/releases) for changelog.
 
 ---
 

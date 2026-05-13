@@ -1,7 +1,7 @@
 {
-  "name": "jx-agent",
+  "name": "hyperagent",
   "version": "5.2.0",
-  "description": "JX-Agent - Open-Source AI Agent Framework",
+  "description": "HyperAgent - Open-Source AI Agent Framework",
   "main": "HyperAgent_Main.js",
   "scripts": {
     "start": "node HyperAgent_Main.js server",
@@ -16,7 +16,6 @@
     "test:watch": "node --watch --test tests/test_*.js"
   },
   "keywords": [
-    "jx-agent",
     "hyperagent",
     "device-control",
     "ai-agent",
