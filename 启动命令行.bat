@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title JingxuanAgent v5.2 CLI 命令行模式
+title JX-Agent v5.2 CLI 命令行模式
 cd /d "%~dp0"
 
 if not exist "node_modules" (
@@ -16,7 +16,7 @@ if not exist "node_modules" (
 cls
 echo.
 echo  ╔══════════════════════════════════════════════════╗
-echo  ║     🧠 JingxuanAgent v5.2 Ultimate                ║
+echo  ║     🧠 JX-Agent v5.2 Ultimate                ║
 echo  ║     命令行交互模式                               ║
 echo  ║     正在启动...                                 ║
 echo  ╚══════════════════════════════════════════════════╝
@@ -24,5 +24,5 @@ echo.
 echo  💡 输入 .help 查看命令，.quit 退出
 echo.
 
-node JingxuanAgent_Main.js interactive
+node JX-Agent_Main.js interactive
 pause

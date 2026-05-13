@@ -1,13 +1,13 @@
 @echo off
 chcp 65001 >nul
-title JingxuanAgent 安装程序 v5.2
+title JX-Agent 安装程序 v5.2
 
 setlocal EnableDelayedExpansion
 
 echo.
 echo  ╔═══════════════════════════════════════════════════════════╗
 echo  ║                                                         ║
-echo  ║     🧠 JingxuanAgent v5.0 Ultimate — 超级智能体            ║
+echo  ║     🧠 JX-Agent v5.0 Ultimate — 超级智能体            ║
 echo  ║     安装程序                                            ║
 echo  ║                                                         ║
 echo  ║     ✨ 多模型路由 | 记忆增强 | GUI控制 | 多智能体      ║
@@ -18,7 +18,7 @@ echo.
 :: ============================================
 :: 获取安装目录
 :: ============================================
-set "DEFAULT_DIR=%USERPROFILE%\JingxuanAgent"
+set "DEFAULT_DIR=%USERPROFILE%\JX-Agent"
 set /p INSTALL_DIR="安装目录 [默认: %DEFAULT_DIR%]: "
 if "!INSTALL_DIR!"=="" set "INSTALL_DIR=%DEFAULT_DIR%"
 
@@ -206,7 +206,7 @@ if not exist "!INSTALL_DIR!\.env" (
 
     :: 写入 .env 配置
     (
-        echo # JingxuanAgent v5.0 Ultimate 环境变量配置
+        echo # JX-Agent v5.0 Ultimate 环境变量配置
         echo # ============================================
         echo LLM_ADAPTER=!ADAPTER!
         echo.
@@ -271,17 +271,17 @@ set "STARTUP_SCRIPT=!INSTALL_DIR!\启动网页版.bat"
 (
 echo @echo off
 echo chcp 65001 ^>nul
-echo title JingxuanAgent v5.0 Ultimate
+echo title JX-Agent v5.0 Ultimate
 echo cd /d "!INSTALL_DIR!"
 echo.
 echo cls
 echo echo.
 echo echo  ╔══════════════════════════════════════════════════╗
-echo echo  ║     🧠 JingxuanAgent v5.0 Ultimate                ║
+echo echo  ║     🧠 JX-Agent v5.0 Ultimate                ║
 echo echo  ║     超级智能体 — 正在启动...                    ║
 echo echo  ╚══════════════════════════════════════════════════╝
 echo echo.
-echo node JingxuanAgent_Main.js server
+echo node JX-Agent_Main.js server
 echo pause
 ) > "!STARTUP_SCRIPT!"
 
@@ -290,22 +290,22 @@ set "CLI_SCRIPT=!INSTALL_DIR!\启动命令行.bat"
 (
 echo @echo off
 echo chcp 65001 ^>nul
-echo title JingxuanAgent v5.0 CLI
+echo title JX-Agent v5.0 CLI
 echo cd /d "!INSTALL_DIR!"
 echo cls
 echo echo.
 echo echo  ╔══════════════════════════════════════════════════╗
-echo echo  ║     🧠 JingxuanAgent v5.0 Ultimate                ║
+echo echo  ║     🧠 JX-Agent v5.0 Ultimate                ║
 echo echo  ║     命令行模式 — 正在启动...                    ║
 echo echo  ╚══════════════════════════════════════════════════╝
 echo echo.
-echo node JingxuanAgent_Main.js interactive
+echo node JX-Agent_Main.js interactive
 ) > "!CLI_SCRIPT!"
 
 :: 桌面快捷方式
-powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\JingxuanAgent网页版.lnk'); $s.TargetPath = '!STARTUP_SCRIPT!'; $s.WorkingDirectory = '!INSTALL_DIR!'; $s.Description = 'JingxuanAgent v5.0 Ultimate - Web界面'; $s.IconLocation = '%SystemRoot%\System32\shell32.dll,165'; $s.Save()" 2>nul
+powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\JX-Agent网页版.lnk'); $s.TargetPath = '!STARTUP_SCRIPT!'; $s.WorkingDirectory = '!INSTALL_DIR!'; $s.Description = 'JX-Agent v5.0 Ultimate - Web界面'; $s.IconLocation = '%SystemRoot%\System32\shell32.dll,165'; $s.Save()" 2>nul
 
-powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\JingxuanAgent命令行.lnk'); $s.TargetPath = '!CLI_SCRIPT!'; $s.WorkingDirectory = '!INSTALL_DIR!'; $s.Description = 'JingxuanAgent v5.0 Ultimate - CLI交互'; $s.IconLocation = '%SystemRoot%\System32\shell32.dll,166'; $s.Save()" 2>nul
+powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\JX-Agent命令行.lnk'); $s.TargetPath = '!CLI_SCRIPT!'; $s.WorkingDirectory = '!INSTALL_DIR!'; $s.Description = 'JX-Agent v5.0 Ultimate - CLI交互'; $s.IconLocation = '%SystemRoot%\System32\shell32.dll,166'; $s.Save()" 2>nul
 
 echo ✅ 桌面快捷方式已创建（网页版 + 命令行）
 echo.
@@ -315,14 +315,14 @@ echo.
 :: ============================================
 echo ════════════════════════════════════════════════════════════
 echo.
-echo  ✅ JingxuanAgent v5.0 Ultimate 安装成功！
+echo  ✅ JX-Agent v5.0 Ultimate 安装成功！
 echo.
 echo  📁 安装目录: !INSTALL_DIR!
 echo.
 echo  🚀 启动方式：
 echo  ─────────────────────────────────────────────────────
-echo  方式1: 双击桌面 "JingxuanAgent网页版" 快捷方式
-echo  方式2: 双击桌面 "JingxuanAgent命令行" 快捷方式
+echo  方式1: 双击桌面 "JX-Agent网页版" 快捷方式
+echo  方式2: 双击桌面 "JX-Agent命令行" 快捷方式
 echo  方式3: 运行 "!INSTALL_DIR!\启动网页版.bat"
 echo.
 echo  🌐 启动后打开浏览器访问：
@@ -346,5 +346,5 @@ if /i "!LAUNCH!"=="Y" (
 )
 
 echo.
-echo 感谢使用 JingxuanAgent！按任意键退出安装程序...
+echo 感谢使用 JX-Agent！按任意键退出安装程序...
 pause >nul

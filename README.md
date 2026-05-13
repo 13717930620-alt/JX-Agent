@@ -1,11 +1,11 @@
-# JingxuanAgent — Open-Source AI Agent Framework
+# JX-Agent — Open-Source AI Agent Framework
 
 <div align="center">
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](package.json)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/13717930620-alt/jingxuanagent/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/13717930620-alt/jingxuanagent?style=social)](https://github.com/13717930620-alt/jingxuanagent)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/13717930620-alt/JX-Agent/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/13717930620-alt/JX-Agent?style=social)](https://github.com/13717930620-alt/JX-Agent)
 
 </div>
 
@@ -21,11 +21,11 @@
 
 ## What Is This?
 
-JingxuanAgent is an open-source framework that gives your computer its own AI agent. Tell it what you want, and it makes it happen.
+JX-Agent is an open-source framework that gives your computer its own AI agent. Tell it what you want, and it makes it happen.
 
 ```
 You say: "Organize my desktop files by type into folders"
-→ JingxuanAgent: Scans desktop → Identifies file types → Creates folders → Moves files → Reports results
+→ JX-Agent: Scans desktop → Identifies file types → Creates folders → Moves files → Reports results
 ```
 
 It works with DeepSeek, GLM, Qwen, MiniMax, or entirely offline using its built-in engine.
@@ -37,7 +37,7 @@ It works with DeepSeek, GLM, Qwen, MiniMax, or entirely offline using its built-
 ```bash
 npm install
 cp .env.example .env     # Optional — built-in model works without it
-node JingxuanAgent_Main.js
+node HyperAgent_Main.js
 ```
 
 Then just talk to it: "Check my CPU usage" or "Create a file called test.txt"
@@ -66,41 +66,30 @@ Then just talk to it: "Check my CPU usage" or "Create a file called test.txt"
 ## Project Structure
 
 ```
-JingxuanAgent/
-├── JingxuanAgent_Main.js          # Entry point
-├── JingxuanAgent_Config.js        # Configuration
-├── JingxuanAgent_Learning.js      # Self-learning system
-├── JingxuanAgent_Core/            # Core system
+JX-Agent/
+├── HyperAgent_Main.js             # Entry point
+├── HyperAgent_Config.js           # Configuration
+├── HyperAgent_Learning.js         # Self-learning system
+├── HyperAgent_Core/               # Core system
 │   ├── cc_mode/                   # Query engine + tool system
 │   ├── cognitive_core/            # Cognitive framework
 │   ├── llm_adapter/               # 5 LLM adapters
 │   └── infra/                     # Infrastructure
-├── JingxuanAgent_Implementation/  # Implementation layer
+├── HyperAgent_Implementation/     # Implementation layer
 │   ├── conversation/              # Conversation engine
 │   ├── orchestrator/              # Task orchestration
 │   ├── atomic_executor/           # Tool executor
 │   ├── memory_engine/             # Memory + vector search
 │   └── device_abstraction/        # Device abstraction + security
+├── HyperAgent_Monitoring/         # Metrics and logging
 ├── services/                      # Web search, config, tunnel
 ├── extensions/                    # Productivity extensions
 ├── docs/                          # Documentation
 ├── 安装程序.bat                   # Windows setup script
 ├── 启动命令行.bat                 # CLI mode launcher
 ├── 启动网页版.bat                 # Web UI launcher
-└── .github/                       # Issue templates
+└── .github/                       # Issue templates & CI
 ```
-
----
-
-## Why I Built This
-
-I am a lawyer. I spend my days reading, writing, and reasoning with words — not code.
-
-But I have always believed that a truly intelligent machine should be more than a chatbot. It should be able to **see** your computer, **understand** what you need, **plan** how to do it, and **execute** the task with its own hands (or rather, its own tools). It should learn from experience, remember what it has learned, and grow smarter over time.
-
-I couldn't write a single line of code to make this real. So I used AI coding assistants — the same tools available to anyone — to describe my vision, piece by piece, and let them help me build it.
-
-This is not a finished product. This is a **framework** — a skeleton — that captures my understanding of what an intelligent agent should be. The muscles, the nerves, the skin — those are for the community to add.
 
 ---
 
@@ -207,6 +196,12 @@ But I have always believed that a truly intelligent machine should be more than 
 I couldn't write a single line of code to make this real. So I used AI coding assistants — the same tools available to anyone — to describe my vision, piece by piece, and let them help me build it.
 
 This is not a finished product. This is a **framework** — a skeleton — that captures my understanding of what an intelligent agent should be. The muscles, the nerves, the skin — those are for the community to add.
+
+---
+
+## Version
+
+**Current release: v5.2.0** — This is an early-stage skeleton. The architecture is foundational and every component is open for rethinking. See the [Releases page](https://github.com/13717930620-alt/JX-Agent/releases) for changelog.
 
 ---
 

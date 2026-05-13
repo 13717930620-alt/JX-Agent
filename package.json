@@ -1,12 +1,12 @@
 {
-  "name": "jingxuanagent",
+  "name": "jx-agent",
   "version": "5.2.0",
-  "description": "JingxuanAgent - Host Device Control Framework (承载体控制系统)",
-  "main": "JingxuanAgent_Main.js",
+  "description": "JX-Agent - Open-Source AI Agent Framework",
+  "main": "HyperAgent_Main.js",
   "scripts": {
-    "start": "node JingxuanAgent_Main.js server",
-    "cli": "node JingxuanAgent_Main.js interactive",
-    "api": "node JingxuanAgent_Main.js server",
+    "start": "node HyperAgent_Main.js server",
+    "cli": "node HyperAgent_Main.js interactive",
+    "api": "node HyperAgent_Main.js server",
     "test": "node --test tests/test_*.js",
     "test:all": "node --test tests/*.js",
     "test:tool": "node --test tests/test_tool_system.js",
@@ -16,6 +16,7 @@
     "test:watch": "node --watch --test tests/test_*.js"
   },
   "keywords": [
+    "jx-agent",
     "hyperagent",
     "device-control",
     "ai-agent",
