@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![GPL v3 License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](package.json)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/JX-Agent/JX-Agent/pulls)
 [![GitHub stars](https://img.shields.io/github/stars/JX-Agent/JX-Agent?style=social)](https://github.com/JX-Agent/JX-Agent)
@@ -207,7 +207,7 @@ This is not a finished product. This is a **framework** — a skeleton — that 
 
 ## License
 
-MIT License — use it, modify it, share it. Free for everyone, forever.
+GPL v3 License — use it, modify it, share it. Derivative works must also be open source.
 
 ---
 
