@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title HyperAgent v5.2 网页版
+title JingxuanAgent v5.2 网页版
 cd /d "%~dp0"
 
 if not exist "node_modules" (
@@ -15,7 +15,7 @@ if not exist "node_modules" (
 
 cls
 echo  ╔══════════════════════════════════════════╗
-echo  ║     HyperAgent v5.2 网页版               ║
+echo  ║     JingxuanAgent v5.2 网页版               ║
 echo  ╚══════════════════════════════════════════╝
 echo.
 
@@ -42,5 +42,5 @@ echo  🌐 启动后打开浏览器访问 http://localhost:3000
 echo  📋 按 Ctrl+C 停止服务器
 echo.
 
-node HyperAgent_Main.js server
+node JingxuanAgent_Main.js server
 pause

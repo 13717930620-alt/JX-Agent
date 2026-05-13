@@ -82,7 +82,7 @@ function walkDir(dir) {
 // Main
 
 console.log('');
-console.log('[HyperAgent Build] 源码混淆构建工具');
+console.log('[JingxuanAgent Build] 源码混淆构建工具');
 console.log('');
 
 if (!fs.existsSync(SOURCE_DIR)) {

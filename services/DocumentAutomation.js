@@ -12,7 +12,7 @@ const fs = require('fs');
 
 class DocumentAutomation {
     constructor(options = {}) {
-        const DocumentParser = require('./HyperAgent_Implementation/atomic_executor/DocumentParser');
+        const DocumentParser = require('./JingxuanAgent_Implementation/atomic_executor/DocumentParser');
         this.parser = new DocumentParser({
             maxFileSize: options.maxFileSize || 50 * 1024 * 1024,
             maxTextLength: options.maxTextLength || 100000,

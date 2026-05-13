@@ -1,6 +1,6 @@
-# HyperAgent 使用说明
+# JingxuanAgent 使用说明
 
-HyperAgent 是一个运行在您电脑上的智能助手，通过自然语言指令操控您的电脑。
+JingxuanAgent 是一个运行在您电脑上的智能助手，通过自然语言指令操控您的电脑。
 
 ---
 
@@ -8,7 +8,7 @@ HyperAgent 是一个运行在您电脑上的智能助手，通过自然语言指
 
 **明确指令 = 在该任务范围内已取得授权**
 
-当您给出明确的操作指令时，HyperAgent 会直接执行，无需额外授权。例如:
+当您给出明确的操作指令时，JingxuanAgent 会直接执行，无需额外授权。例如:
 
 ```
 ❌ 需要先授权再执行:
@@ -19,7 +19,7 @@ HyperAgent 是一个运行在您电脑上的智能助手，通过自然语言指
    用户: "帮我创建一个文件"
 ```
 
-如果您只是提问而非下指令，HyperAgent 会回答问题而不执行任何操作。
+如果您只是提问而非下指令，JingxuanAgent 会回答问题而不执行任何操作。
 
 ---
 
@@ -64,7 +64,7 @@ HyperAgent 是一个运行在您电脑上的智能助手，通过自然语言指
 ### 浏览器自动化
 
 ```
-打开百度搜索"HyperAgent"
+打开百度搜索"JingxuanAgent"
 截图当前浏览器页面
 把搜索结果保存到文件
 ```
@@ -154,7 +154,7 @@ function process(data) {
 
 ### 4. 真实语义搜索 (Embedding)
 
-HyperAgent v5.0 的记忆系统支持三种 Embedding 模式:
+JingxuanAgent v5.0 的记忆系统支持三种 Embedding 模式:
 
 | 模式 | 配置 | 精度 | 依赖 |
 |------|------|------|------|
@@ -184,21 +184,21 @@ HyperAgent v5.0 的记忆系统支持三种 Embedding 模式:
 帮我做三件事: 先查看系统信息，再创建一个测试文件，最后列出桌面文件
 
 # 模拟中断: Ctrl+C 退出后重启，再次输入相同任务
-# HyperAgent 会自动检测到之前的检查点，从中断处继续执行
+# JingxuanAgent 会自动检测到之前的检查点，从中断处继续执行
 ```
 
 检查点文件保存在 `checkpoints/` 目录下，包含完整的消息历史和子任务状态。
 
 ### 6. 工作记录 (Work Record) — 中断恢复
 
-HyperAgent 会自动记录每次对话的工作目标、进度和关键发现，保存在 `work_records/` 目录。
+JingxuanAgent 会自动记录每次对话的工作目标、进度和关键发现，保存在 `work_records/` 目录。
 
 **中断后恢复流程:**
 
 ```
 第一次使用: 创建文件 test.txt → 系统自动保存工作记录
   ↓ (意外关闭 / Ctrl+C / 崩溃)
-第二次启动: HyperAgent 读取上次工作记录 → 自动注入恢复上下文
+第二次启动: JingxuanAgent 读取上次工作记录 → 自动注入恢复上下文
             → 智能体知道"刚才在创建文件" → 可以直接继续
 ```
 
@@ -247,7 +247,7 @@ curl http://localhost:3000/api/work-record
 ### 1. 交互模式（CLI）
 
 ```bash
-node HyperAgent_Main.js
+node JingxuanAgent_Main.js
 ```
 
 内置命令:
@@ -264,7 +264,7 @@ node HyperAgent_Main.js
 ### 2. 服务模式（Web）
 
 ```bash
-node HyperAgent_Main.js server
+node JingxuanAgent_Main.js server
 ```
 
 提供 REST API:
@@ -283,7 +283,7 @@ node HyperAgent_Main.js server
 我要出去了 / 开启远程访问
 ```
 
-HyperAgent 会生成一个公网链接。到外面后用浏览器访问即可继续对话。
+JingxuanAgent 会生成一个公网链接。到外面后用浏览器访问即可继续对话。
 
 回到电脑前说:
 
@@ -306,11 +306,11 @@ HyperAgent 会生成一个公网链接。到外面后用浏览器访问即可继
 | 管理 | 系统配置 | 注册表、服务管理 |
 | 危险 | 高风险操作 | 格式化、关机 |
 
-**默认**: 安装即获得最高授权。只要您给出明确指令，HyperAgent 即可操控承载体全部功能，无需额外授权步骤。
+**默认**: 安装即获得最高授权。只要您给出明确指令，JingxuanAgent 即可操控承载体全部功能，无需额外授权步骤。
 
 ### 手动降级（可选）
 
-如需限制 HyperAgent 的权限范围:
+如需限制 JingxuanAgent 的权限范围:
 
 ```
 取消授权                    # 取消所有权限
@@ -382,7 +382,7 @@ curl https://api.deepseek.com/chat/completions \
 启动时观察控制台输出:
 - `[WorkRecord] 发现上次工作记录` — 成功找到并加载工作记录
 - `[WorkRecord] 未找到历史工作记录，首次启动` — 没有上一会话的记录（首次使用或 `work_records/` 被清空）
-- `[HyperAgent] 已加载工作记录恢复上下文` — 恢复上下文已注入到 system prompt
+- `[JingxuanAgent] 已加载工作记录恢复上下文` — 恢复上下文已注入到 system prompt
 
 如果工作记录没有恢复，检查 `work_records/` 目录是否存在且有 JSON 文件。
 

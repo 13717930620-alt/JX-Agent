@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HyperAgent v5.0 Ultimate 使用说明</title>
+<title>JingxuanAgent v5.0 Ultimate 使用说明</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, 'Microsoft YaHei', 'PingFang SC', sans-serif; background: #0f0f0f; color: #e0e0e0; line-height: 1.8; }
@@ -54,7 +54,7 @@ td { color: #aaa; }
 
 <div class="header">
 <div class="logo">🧠</div>
-<h1>HyperAgent 使用说明</h1>
+<h1>JingxuanAgent 使用说明</h1>
 <p class="subtitle">版本 5.0 Ultimate &nbsp;|&nbsp; 超级智能体系统 &nbsp;|&nbsp; 承载体智能体</p>
 <div class="tags">
 <span class="tag tag-green">多模型路由</span>
@@ -69,7 +69,7 @@ td { color: #aaa; }
 <!-- ========== 概述 ========== -->
 <h2>📖 概述</h2>
 <p>
-HyperAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<strong>超级智能体系统</strong>。让您的电脑拥有自己的智能体，用自然语言指挥它完成目标。
+JingxuanAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<strong>超级智能体系统</strong>。让您的电脑拥有自己的智能体，用自然语言指挥它完成目标。
 </p>
 <div class="feature-grid">
 <div class="feature-card"><h4>🧠 多模型路由</h4><p>DeepSeek/GLM/Qwen/MiniMax 自动切换与降级</p></div>
@@ -96,27 +96,27 @@ HyperAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<str
 </div>
 
 <div class="step-box">
-<span class="step-num">3</span><h4>启动 HyperAgent</h4>
+<span class="step-num">3</span><h4>启动 JingxuanAgent</h4>
 <p>安装完成后可以选择立即启动，或以后双击桌面快捷方式启动。</p>
 </div>
 
 <div class="step-box">
 <span class="step-num">4</span><h4>开始使用</h4>
-<p>CLI 模式直接输入指令对话。网页版在浏览器访问 <strong>http://localhost:3000</strong>，开始与 HyperAgent 对话。</p>
+<p>CLI 模式直接输入指令对话。网页版在浏览器访问 <strong>http://localhost:3000</strong>，开始与 JingxuanAgent 对话。</p>
 </div>
 
 <!-- ========== 核心原则 ========== -->
 <h2>🔐 核心原则：明确指令 = 授权</h2>
 
-<p>当您给出<strong>明确的操作指令</strong>时，HyperAgent 在该任务范围内直接执行，无需额外授权。提问 vs 指令由内置的反任务幻觉系统区分，无需记忆额外的"咒语"。</p>
+<p>当您给出<strong>明确的操作指令</strong>时，JingxuanAgent 在该任务范围内直接执行，无需额外授权。提问 vs 指令由内置的反任务幻觉系统区分，无需记忆额外的"咒语"。</p>
 
 <pre><code>✅ 直接下指令即可:
 用户: "帮我创建一个文件"
- → HyperAgent: 直接创建文件
+ → JingxuanAgent: 直接创建文件
 
 ✅ 提问不会触发执行:
 用户: "如何创建文件？"
- → HyperAgent: 回答如何创建文件（不执行操作）</code></pre>
+ → JingxuanAgent: 回答如何创建文件（不执行操作）</code></pre>
 
 <div class="tip">
 <strong>💡 权限级别:</strong><br>
@@ -130,7 +130,7 @@ HyperAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<str
 <h2>🎯 核心能力详解</h2>
 
 <h3>💬 智能对话</h3>
-<p>HyperAgent 能理解复杂的对话意图，自动追踪对话话题，记住用户偏好。</p>
+<p>JingxuanAgent 能理解复杂的对话意图，自动追踪对话话题，记住用户偏好。</p>
 <pre><code>用户: 帮我看看电脑的 CPU 使用率
  → 意图识别: 查询 → 执行 sys_info → 返回结果
 
@@ -151,7 +151,7 @@ HyperAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<str
  → "桌面上有 3 个文件夹，1 个 Chrome 快捷方式..."</code></pre>
 
 <h3>🧠 记忆增强</h3>
-<p>HyperAgent 会记住跨会话的关键信息，包括用户偏好、重要决定、项目上下文。</p>
+<p>JingxuanAgent 会记住跨会话的关键信息，包括用户偏好、重要决定、项目上下文。</p>
 <pre><code>会话1: "我喜欢用 VS Code 写代码"
 会话2: (重启后) "帮我创建一个 Python 项目"
        → 记得用户偏好 VS Code → 创建项目并用 VS Code 打开</code></pre>
@@ -229,17 +229,17 @@ function process(data) {
 帮我做三件事: 先查看系统信息，再创建一个测试文件，最后列出桌面文件
 
 # 中断后重启，再次输入相同任务
-# HyperAgent 会自动检测到之前的检查点，从中断处继续执行</code></pre>
+# JingxuanAgent 会自动检测到之前的检查点，从中断处继续执行</code></pre>
 
 <h3>6. 工作记录 (Work Record)</h3>
-<p>HyperAgent 会自动记录每次对话的工作目标、进度和关键发现，中断后快速恢复。</p>
+<p>JingxuanAgent 会自动记录每次对话的工作目标、进度和关键发现，中断后快速恢复。</p>
 <pre><code># 查看工作记录
 .work
 
 # 中断后恢复
 第一次使用: 创建文件 test.txt → 系统自动保存工作记录
   ↓ (意外关闭 / Ctrl+C / 崩溃)
-第二次启动: HyperAgent 读取上次工作记录 → 自动注入恢复上下文
+第二次启动: JingxuanAgent 读取上次工作记录 → 自动注入恢复上下文
             → 知道"刚才在创建文件" → 可以直接继续</code></pre>
 
 <!-- ========== 命令示例 ========== -->
@@ -253,7 +253,7 @@ function process(data) {
 <tr><td>命令执行</td><td>"运行 ipconfig"、"查一下 CPU 使用率"</td></tr>
 <tr><td>进程管理</td><td>"列出所有 Chrome 进程"、"帮我结束 PID 1234 的进程"</td></tr>
 <tr><td>GUI 控制</td><td>"打开计算器"、"截取当前屏幕"、"打开 Chrome 访问百度"</td></tr>
-<tr><td>浏览器</td><td>"打开百度搜索'HyperAgent'"、"截图当前浏览器页面"</td></tr>
+<tr><td>浏览器</td><td>"打开百度搜索'JingxuanAgent'"、"截图当前浏览器页面"</td></tr>
 <tr><td>代码工具 (v5.0)</td><td>"帮我对比这两段代码的差异"、"分析这个函数的圈复杂度"</td></tr>
 <tr><td>记忆操作</td><td>"记住我的 API 地址是 xxx"、"我刚才说了什么"</td></tr>
 <tr><td>模型切换</td><td>"换用 GLM 模型"、"切换到 deepseek"</td></tr>
@@ -264,7 +264,7 @@ function process(data) {
 <h2>⚡ 工作模式</h2>
 
 <h3>1. 交互模式（CLI）</h3>
-<pre><code>node HyperAgent_Main.js</code></pre>
+<pre><code>node JingxuanAgent_Main.js</code></pre>
 
 <div class="table-wrap">
 <table>
@@ -280,7 +280,7 @@ function process(data) {
 </div>
 
 <h3>2. 服务模式（Web + API）</h3>
-<pre><code>node HyperAgent_Main.js server</code></pre>
+<pre><code>node JingxuanAgent_Main.js server</code></pre>
 <p>提供 REST API：</p>
 <ul>
 <li><code>POST /api/chat</code> — 发送任务</li>
@@ -292,7 +292,7 @@ function process(data) {
 </ul>
 
 <h3>3. 远程访问</h3>
-<p>在对话中说"我要出去了"或"开启远程访问"，HyperAgent 会生成公网链接。到外面后用浏览器访问即可继续对话。</p>
+<p>在对话中说"我要出去了"或"开启远程访问"，JingxuanAgent 会生成公网链接。到外面后用浏览器访问即可继续对话。</p>
 
 <div class="warn">
 <strong>⚠️ 远程访问时安全提示</strong><br>
@@ -402,7 +402,7 @@ PORT=3000</code></pre>
 
 <br><br>
 <p style="text-align:center;color:#555;font-size:13px;">
-© 2026 HyperAgent v5.0 Ultimate &nbsp;|&nbsp; 承载体智能体系统
+© 2026 JingxuanAgent v5.0 Ultimate &nbsp;|&nbsp; 承载体智能体系统
 </p>
 
 </div>

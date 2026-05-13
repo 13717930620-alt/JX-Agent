@@ -1,4 +1,4 @@
-# HyperAgent 安装指南
+# JingxuanAgent 安装指南
 
 ## 系统要求
 
@@ -75,7 +75,7 @@ QWEN_MODEL=qwen-plus
 
 ### 4. (可选) 配置 Embedding 模型 — v5.0 真实语义搜索
 
-HyperAgent v5.0 支持使用真实 Embedding 模型替换内置 TF-IDF，大幅提升记忆检索精度。
+JingxuanAgent v5.0 支持使用真实 Embedding 模型替换内置 TF-IDF，大幅提升记忆检索精度。
 
 #### 方式 A: OpenAI text-embedding-3（推荐，效果最佳）
 
@@ -139,12 +139,12 @@ rustup component add rust-analyzer
 ### 交互模式（CLI）
 
 ```bash
-node HyperAgent_Main.js
+node JingxuanAgent_Main.js
 ```
 
-启动后进入交互式命令行，输入指令即可与 HyperAgent 对话。
+启动后进入交互式命令行，输入指令即可与 JingxuanAgent 对话。
 
-HyperAgent 会自动在项目目录下创建以下数据目录:
+JingxuanAgent 会自动在项目目录下创建以下数据目录:
 - **`work_records/`** — 工作记录（中断恢复用）
 - **`mem_store/`** — 记忆存储（L1-L3 记忆）
 - **`checkpoints/`** — 任务检查点（长时间任务恢复）
@@ -153,7 +153,7 @@ HyperAgent 会自动在项目目录下创建以下数据目录:
 ### 服务模式（Web + API）
 
 ```bash
-node HyperAgent_Main.js server
+node JingxuanAgent_Main.js server
 ```
 
 访问 `http://localhost:3000` 打开 Web 控制台。

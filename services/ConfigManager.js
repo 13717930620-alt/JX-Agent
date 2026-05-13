@@ -187,7 +187,7 @@ class ConfigManager {
             await fs.promises.copyFile(this.envPath, bakPath);
         }
         // 清空配置内容（只保留注释头）
-        const header = '# HyperAgent 环境变量配置\n# 已重置为默认\n';
+        const header = '# JingxuanAgent 环境变量配置\n# 已重置为默认\n';
         await fs.promises.writeFile(this.envPath, header, 'utf-8');
         this._parsed = {};
         this._rawLines = header.split('\n');
