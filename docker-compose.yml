@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  hyperagent:
+    build: .
+    container_name: hyperagent
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - LOG_LEVEL=info
+      - HYPERAGENT_DB_PATH=/app/data/hyperagent.db
+      - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL:-https://api.deepseek.com/anthropic}
+      - ANTHROPIC_AUTH_TOKEN=${ANTHROPIC_AUTH_TOKEN:-}
+      - LLM_ADAPTER=${LLM_ADAPTER:-deepseek}
+    volumes:
+      - hyperagent_data:/app/data
+      - hyperagent_mem:/app/mem_store
+      - hyperagent_plugins:/app/plugins
+      - hyperagent_work:/app/work_records
+      - ./.env:/app/.env:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  hyperagent_data:
+  hyperagent_mem:
+  hyperagent_plugins:
+  hyperagent_work:

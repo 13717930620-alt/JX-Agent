@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HyperAgent v5.0 Ultimate 使用说明</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'Microsoft YaHei', 'PingFang SC', sans-serif; background: #0f0f0f; color: #e0e0e0; line-height: 1.8; }
+.container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, #6c5ce7, #00e676); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 24px; font-weight: 600; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #252525; color: #fff; }
+h3 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; color: #ccc; }
+p { margin-bottom: 12px; color: #aaa; }
+ul, ol { margin: 8px 0 16px 24px; color: #aaa; }
+li { margin-bottom: 6px; }
+a { color: #6c5ce7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: 'Consolas', 'Courier New', monospace; background: #1a1a2e; padding: 2px 8px; border-radius: 4px; font-size: 14px; color: #e0e0e0; }
+pre { background: #1a1a2e; border: 1px solid #333; border-radius: 8px; padding: 16px; overflow-x: auto; margin: 12px 0; font-size: 14px; line-height: 1.5; }
+pre code { background: none; padding: 0; }
+.header { text-align: center; padding: 60px 0 40px; }
+.header .logo { font-size: 64px; margin-bottom: 16px; }
+.header .subtitle { color: #666; font-size: 14px; }
+.header .tags { margin-top: 12px; }
+.step-box { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+.step-box .step-num { display: inline-block; background: #6c5ce7; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 14px; font-weight: 600; margin-right: 8px; }
+.step-box h4 { display: inline; font-size: 16px; color: #fff; }
+.step-box p { margin: 8px 0 0 36px; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-right: 6px; }
+.tag-green { background: rgba(0,230,118,0.15); color: #00e676; }
+.tag-blue { background: rgba(68,138,255,0.15); color: #448aff; }
+.tag-orange { background: rgba(255,145,0,0.15); color: #ff9100; }
+.tag-purple { background: rgba(108,92,231,0.15); color: #6c5ce7; }
+.tag-red { background: rgba(255,82,82,0.15); color: #ff5252; }
+.tag-cyan { background: rgba(0,230,230,0.15); color: #00e6e6; }
+.table-wrap { overflow-x: auto; margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #252525; }
+th { background: #1a1a1a; color: #888; font-weight: 500; font-size: 13px; text-transform: uppercase; }
+td { color: #aaa; }
+.tip { background: rgba(108,92,231,0.1); border-left: 4px solid #6c5ce7; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+.warn { background: rgba(255,145,0,0.1); border-left: 4px solid #ff9100; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+.err { background: rgba(255,82,82,0.1); border-left: 4px solid #ff5252; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 20px 0; }
+.feature-card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 20px; }
+.feature-card h4 { color: #fff; font-size: 15px; margin-bottom: 8px; }
+.feature-card p { font-size: 13px; margin: 0; }
+@media (max-width: 600px) { .container { padding: 20px 16px; } h1 { font-size: 24px; } .feature-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<div class="logo">🧠</div>
+<h1>HyperAgent 使用说明</h1>
+<p class="subtitle">版本 5.0 Ultimate &nbsp;|&nbsp; 超级智能体系统 &nbsp;|&nbsp; 承载体智能体</p>
+<div class="tags">
+<span class="tag tag-green">多模型路由</span>
+<span class="tag tag-blue">记忆增强</span>
+<span class="tag tag-purple">GUI控制</span>
+<span class="tag tag-orange">多智能体</span>
+<span class="tag tag-red">MCP协议</span>
+<span class="tag tag-cyan">代码工具链</span>
+</div>
+</div>
+
+<!-- ========== 概述 ========== -->
+<h2>📖 概述</h2>
+<p>
+HyperAgent v5.0 Ultimate 是一个集成了最先进开源智能体技术的<strong>超级智能体系统</strong>。让您的电脑拥有自己的智能体，用自然语言指挥它完成目标。
+</p>
+<div class="feature-grid">
+<div class="feature-card"><h4>🧠 多模型路由</h4><p>DeepSeek/GLM/Qwen/MiniMax 自动切换与降级</p></div>
+<div class="feature-card"><h4>💾 记忆增强</h4><p>向量语义搜索 + 跨会话记忆 + 知识图谱</p></div>
+<div class="feature-card"><h4>🖥️ GUI控制</h4><p>纯视觉桌面操作，截图→理解→点击</p></div>
+<div class="feature-card"><h4>🔧 任务分解</h4><p>复杂任务自动拆解为子任务，带检查点/恢复</p></div>
+<div class="feature-card"><h4>🤖 多智能体</h4><p>5个角色协作：协调者/研究员/程序员/执行者/审查员</p></div>
+<div class="feature-card"><h4>🔌 MCP协议</h4><p>标准工具服务器：文件/Shell/浏览器/记忆/搜索</p></div>
+<div class="feature-card"><h4>💻 代码工具链 (v5.0)</h4><p>Diff/Apply 补丁、LSP 代码智能、AST 分析</p></div>
+<div class="feature-card"><h4>🔍 真实 Embedding (v5.0)</h4><p>text-embedding-3/BGE/jina-embeddings 语义搜索</p></div>
+</div>
+
+<!-- ========== 快速开始 ========== -->
+<h2>🚀 快速开始</h2>
+
+<div class="step-box">
+<span class="step-num">1</span><h4>安装 Node.js</h4>
+<p>确保已安装 Node.js 18+。访问 <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> 下载 LTS 版本。</p>
+</div>
+
+<div class="step-box">
+<span class="step-num">2</span><h4>双击运行安装程序</h4>
+<p>运行「安装程序.bat」，按提示选择安装目录、输入 API Key、选择模型。</p>
+</div>
+
+<div class="step-box">
+<span class="step-num">3</span><h4>启动 HyperAgent</h4>
+<p>安装完成后可以选择立即启动，或以后双击桌面快捷方式启动。</p>
+</div>
+
+<div class="step-box">
+<span class="step-num">4</span><h4>开始使用</h4>
+<p>CLI 模式直接输入指令对话。网页版在浏览器访问 <strong>http://localhost:3000</strong>，开始与 HyperAgent 对话。</p>
+</div>
+
+<!-- ========== 核心原则 ========== -->
+<h2>🔐 核心原则：明确指令 = 授权</h2>
+
+<p>当您给出<strong>明确的操作指令</strong>时，HyperAgent 在该任务范围内直接执行，无需额外授权。提问 vs 指令由内置的反任务幻觉系统区分，无需记忆额外的"咒语"。</p>
+
+<pre><code>✅ 直接下指令即可:
+用户: "帮我创建一个文件"
+ → HyperAgent: 直接创建文件
+
+✅ 提问不会触发执行:
+用户: "如何创建文件？"
+ → HyperAgent: 回答如何创建文件（不执行操作）</code></pre>
+
+<div class="tip">
+<strong>💡 权限级别:</strong><br>
+• 信息（只读查询）：查时间、系统信息 — 默认<br>
+• 控制（文件/命令/进程）：创建文件、运行命令 — 明确指令后自动授权<br>
+• 管理（系统配置）：注册表、服务管理<br>
+• 危险（高风险操作）：格式化、关机 — 硬编码拦截
+</div>
+
+<!-- ========== 核心能力 ========== -->
+<h2>🎯 核心能力详解</h2>
+
+<h3>💬 智能对话</h3>
+<p>HyperAgent 能理解复杂的对话意图，自动追踪对话话题，记住用户偏好。</p>
+<pre><code>用户: 帮我看看电脑的 CPU 使用率
+ → 意图识别: 查询 → 执行 sys_info → 返回结果
+
+用户: 如何用 Python 读取 Excel 文件？
+ → 改写检测: 这是提问，不是命令 → 给出代码示例
+
+用户: 写个脚本把桌面上所有 .jpg 文件重命名
+ → 任务分解: 分解为 ①列出文件 ②遍历重命名 ③验证结果</code></pre>
+
+<h3>🖥️ GUI 桌面控制（UI-TARS）</h3>
+<p>通过截图理解屏幕内容，自动执行鼠标/键盘操作。不需要知道坐标或元素选择器。</p>
+<pre><code>用户: 打开 Chrome 浏览器，访问百度搜索"天气"
+ → [截图 → 找到Chrome图标 → 双击 → 等待启动 →
+    截图 → 找到地址栏 → 点击 → 输入文字 → ...]
+
+用户: 帮我截图看看桌面上有什么
+ → gui_analyze_screen("描述桌面内容")
+ → "桌面上有 3 个文件夹，1 个 Chrome 快捷方式..."</code></pre>
+
+<h3>🧠 记忆增强</h3>
+<p>HyperAgent 会记住跨会话的关键信息，包括用户偏好、重要决定、项目上下文。</p>
+<pre><code>会话1: "我喜欢用 VS Code 写代码"
+会话2: (重启后) "帮我创建一个 Python 项目"
+       → 记得用户偏好 VS Code → 创建项目并用 VS Code 打开</code></pre>
+
+<h3>🔧 任务自动分解</h3>
+<p>复杂任务会自动拆解为子任务，带检查点和进度追踪。</p>
+<pre><code>用户: 整理桌面文件，把图片放到一个文件夹，文档放到另一个
+
+ → 自动分解:
+   ① 创建 "图片" 和 "文档" 文件夹
+   ② 搜索桌面上的 .jpg/.png 文件 → 移动到 "图片"
+   ③ 搜索桌面上的 .doc/.pdf 文件 → 移动到 "文档"
+   ④ 验证结果并报告
+
+ → 进度: "已完成 2/4 步..."</code></pre>
+
+<h3>🤖 多智能体协作</h3>
+<p>遇到复杂任务时，5个专业智能体角色可以协作完成。</p>
+<pre><code>协调者: 分解任务 → 分配研究员和程序员
+研究员: 搜索最新 AI 新闻 → 整理关键信息
+程序员: 生成数据可视化图表
+审查员: 检查报告质量和准确性
+协调者: 汇总最终报告给用户</code></pre>
+
+<!-- ========== v5.0 新功能 ========== -->
+<h2>✨ v5.0 新功能详解</h2>
+
+<h3>1. 代码差异对比 (Diff/Apply)</h3>
+<p>生成和运用 unified diff 格式补丁，自动计算增删行和变更统计。</p>
+<pre><code># 对比两段代码的差异
+帮我对比以下两段代码的差异:
+原文: "function add(a,b){return a+b}"
+改后: "function add(a,b){return a + b;}"</code></pre>
+
+<h3>2. LSP 代码智能</h3>
+<p>连接语言服务器，获取专业的代码诊断和分析。需要先安装对应的 LSP 服务器：</p>
+<pre><code># JavaScript/TypeScript
+npm install -g typescript-language-server typescript
+
+# Python
+pip install pyright
+
+# Go
+go install golang.org/x/tools/gopls@latest</code></pre>
+<pre><code># 启动后可以用:
+帮我检查 index.js 文件有没有语法错误
+查看 index.js 第5行第10列的类型信息</code></pre>
+
+<h3>3. AST 代码结构分析</h3>
+<p>无需外部依赖，直接解析 JavaScript/TypeScript 代码结构。</p>
+<pre><code># 分析代码复杂度
+帮我分析以下代码的圈复杂度:
+function process(data) {
+  if (data.valid) {
+    for (const item of data.items) {
+      if (item.active) { processItem(item); }
+    }
+  }
+}</code></pre>
+
+<h3>4. 真实语义搜索 (Embedding)</h3>
+<p>支持三种 Embedding 模式，大幅提升记忆检索精度：</p>
+<div class="table-wrap">
+<table>
+<tr><th>模式</th><th>配置</th><th>精度</th><th>依赖</th></tr>
+<tr><td>API</td><td>EMBEDDING_MODE=api</td><td>★★★★★</td><td>需 API Key</td></tr>
+<tr><td>Local</td><td>EMBEDDING_MODE=local + ollama</td><td>★★★★</td><td>需 ollama</td></tr>
+<tr><td>Builtin</td><td>默认（零配置）</td><td>★★★</td><td>无</td></tr>
+</table>
+</div>
+
+<h3>5. 检查点恢复（长时间任务）</h3>
+<p>长时间、多步骤的任务会自动保存执行状态，中断后可恢复。</p>
+<pre><code># 创建一个多步骤任务（会自动在后台保存检查点）
+帮我做三件事: 先查看系统信息，再创建一个测试文件，最后列出桌面文件
+
+# 中断后重启，再次输入相同任务
+# HyperAgent 会自动检测到之前的检查点，从中断处继续执行</code></pre>
+
+<h3>6. 工作记录 (Work Record)</h3>
+<p>HyperAgent 会自动记录每次对话的工作目标、进度和关键发现，中断后快速恢复。</p>
+<pre><code># 查看工作记录
+.work
+
+# 中断后恢复
+第一次使用: 创建文件 test.txt → 系统自动保存工作记录
+  ↓ (意外关闭 / Ctrl+C / 崩溃)
+第二次启动: HyperAgent 读取上次工作记录 → 自动注入恢复上下文
+            → 知道"刚才在创建文件" → 可以直接继续</code></pre>
+
+<!-- ========== 命令示例 ========== -->
+<h2>💡 常用命令示例</h2>
+
+<div class="table-wrap">
+<table>
+<tr><th>类别</th><th>命令示例</th></tr>
+<tr><td>系统信息</td><td>"CPU 使用率是多少"、"当前系统时间是多少？"</td></tr>
+<tr><td>文件操作</td><td>"帮我创建一个文件 test.txt"、"把桌面上的 report.docx 复制到 D:\backup"</td></tr>
+<tr><td>命令执行</td><td>"运行 ipconfig"、"查一下 CPU 使用率"</td></tr>
+<tr><td>进程管理</td><td>"列出所有 Chrome 进程"、"帮我结束 PID 1234 的进程"</td></tr>
+<tr><td>GUI 控制</td><td>"打开计算器"、"截取当前屏幕"、"打开 Chrome 访问百度"</td></tr>
+<tr><td>浏览器</td><td>"打开百度搜索'HyperAgent'"、"截图当前浏览器页面"</td></tr>
+<tr><td>代码工具 (v5.0)</td><td>"帮我对比这两段代码的差异"、"分析这个函数的圈复杂度"</td></tr>
+<tr><td>记忆操作</td><td>"记住我的 API 地址是 xxx"、"我刚才说了什么"</td></tr>
+<tr><td>模型切换</td><td>"换用 GLM 模型"、"切换到 deepseek"</td></tr>
+</table>
+</div>
+
+<!-- ========== 工作模式 ========== -->
+<h2>⚡ 工作模式</h2>
+
+<h3>1. 交互模式（CLI）</h3>
+<pre><code>node HyperAgent_Main.js</code></pre>
+
+<div class="table-wrap">
+<table>
+<tr><th>命令</th><th>功能</th></tr>
+<tr><td><code>.status</code></td><td>查看系统状态（所有组件运行情况）</td></tr>
+<tr><td><code>.stats</code></td><td>查看详细统计信息</td></tr>
+<tr><td><code>.devices</code></td><td>查看已注册的设备列表</td></tr>
+<tr><td><code>.learn</code></td><td>查看持续学习报告</td></tr>
+<tr><td><code>.work</code></td><td>查看工作记录和恢复状态</td></tr>
+<tr><td><code>.help</code></td><td>显示帮助</td></tr>
+<tr><td><code>.quit</code> / <code>.exit</code></td><td>退出程序</td></tr>
+</table>
+</div>
+
+<h3>2. 服务模式（Web + API）</h3>
+<pre><code>node HyperAgent_Main.js server</code></pre>
+<p>提供 REST API：</p>
+<ul>
+<li><code>POST /api/chat</code> — 发送任务</li>
+<li><code>POST /api/chat/stream</code> — SSE 流式对话</li>
+<li><code>POST /api/chat/tools</code> — 工具调用模式</li>
+<li><code>GET /api/status</code> — 系统状态</li>
+<li><code>GET /api/stats</code> — 统计信息</li>
+<li><code>GET /api/work-record</code> — 工作记录</li>
+</ul>
+
+<h3>3. 远程访问</h3>
+<p>在对话中说"我要出去了"或"开启远程访问"，HyperAgent 会生成公网链接。到外面后用浏览器访问即可继续对话。</p>
+
+<div class="warn">
+<strong>⚠️ 远程访问时安全提示</strong><br>
+建议设置 <code>HYPERAGENT_AUTH_TOKEN</code> 防止未授权访问。
+</div>
+
+<!-- ========== 环境变量 ========== -->
+<h2>⚙️ 环境变量配置</h2>
+<p>在安装目录的 <code>.env</code> 文件中可以修改配置。复制 <code>.env.example</code> 为 <code>.env</code> 后编辑。</p>
+<pre><code># LLM 主适配器 — 可选: deepseek / glm / minimax / qwen
+LLM_ADAPTER=deepseek
+
+# API 密钥（至少配置一个）
+DEEPSEEK_API_KEY=sk-xxxxx
+
+# 多模型路由
+MULTI_MODEL_ENABLED=true
+
+# Embedding 模式 (v5.0) — api / local / builtin / hybrid
+EMBEDDING_MODE=hybrid
+
+# 记忆功能
+VECTOR_STORE_ENABLED=true
+CROSS_SESSION_MEMORY=true
+KG_ENABLED=true
+
+# GUI 控制 (UI-TARS)
+UI_TARS_ENABLED=true
+UI_TARS_ALLOW_KEYBOARD=false
+
+# 多智能体
+MULTI_AGENT_ENABLED=true
+
+# 任务检查点 (v5.0)
+CHECKPOINT_ENABLED=true
+
+# Web 服务端口
+PORT=3000</code></pre>
+
+<!-- ========== 技术规格 ========== -->
+<h2>📊 技术规格</h2>
+<div class="table-wrap">
+<table>
+<tr><th>项目</th><th>值</th></tr>
+<tr><td>运行环境</td><td>Node.js 18+</td></tr>
+<tr><td>工具数</td><td>45+ (含 v5.0 代码工具)</td></tr>
+<tr><td>支持的 LLM</td><td>DeepSeek / GLM / Qwen / MiniMax</td></tr>
+<tr><td>GUI 自动化</td><td>UI-TARS + Nut.js</td></tr>
+<tr><td>浏览器</td><td>Puppeteer</td></tr>
+<tr><td>协议</td><td>MCP (Model Context Protocol)</td></tr>
+<tr><td>记忆层级</td><td>L0 → L1 → L2 → L3 + 认知升华</td></tr>
+<tr><td>Embedding (v5.0)</td><td>text-embedding-3 / BGE / jina-embeddings / 内置 TF-IDF</td></tr>
+<tr><td>检查点 (v5.0)</td><td>完整执行上下文持久化 + 中断恢复</td></tr>
+<tr><td>代码工具 (v5.0)</td><td>Diff/Apply / LSP / AST 分析</td></tr>
+</table>
+</div>
+
+<!-- ========== 故障排除 ========== -->
+<h2>🔧 故障排除</h2>
+
+<div class="warn">
+<strong>⚠️ 启动报 "No API key set"</strong><br>
+确保 <code>.env</code> 文件已正确配置 API Key。
+</div>
+
+<div class="warn">
+<strong>⚠️ Puppeteer 启动失败</strong><br>
+运行 <code>npx puppeteer browsers install chrome</code> 手动安装 Chromium。
+</div>
+
+<div class="warn">
+<strong>⚠️ 端口被占用</strong><br>
+服务模式会自动尝试递增端口，查看控制台输出的实际端口号，或修改 <code>.env</code> 中的 PORT。
+</div>
+
+<div class="warn">
+<strong>⚠️ Embedding 未生效</strong><br>
+启动时观察控制台输出：<code>[MemoryPipeline] 初始化完成 (XX项索引, embedding=api)</code> 表示 API 模式正常。<code>builtin</code> 表示使用内置 TF-IDF 模式。
+</div>
+
+<div class="warn">
+<strong>⚠️ 指令没有被执行</strong><br>
+1. 尽量使用"帮我做X"、"创建X"等明确措辞<br>
+2. 检查 API Key 和 URL 是否正确<br>
+3. 查看控制台输出中的错误信息
+</div>
+
+<div class="tip">
+<strong>💡 获取帮助</strong><br>
+• 在 CLI 中输入 <code>.help</code> 查看可用命令<br>
+• 查看 <code>.env</code> 文件中的详细配置说明<br>
+• 运行 <code>.status</code> 查看系统组件状态
+</div>
+
+<!-- ========== 版本历史 ========== -->
+<h2>📋 版本历史</h2>
+<div class="table-wrap">
+<table>
+<tr><th>版本</th><th>新特性</th></tr>
+<tr><td>v5.0</td><td>🎉 Ultimate 版：代码工具链 (Diff/Apply/LSP/AST)、真实 Embedding 语义搜索、检查点恢复、工作记录系统</td></tr>
+<tr><td>v4.0</td><td>内置纯 JS 推理引擎（零外部依赖）、向量语义搜索、跨会话记忆、思维树、多智能体、认知框架</td></tr>
+<tr><td>v3.1</td><td>反任务幻觉、执行凭证、设备插件系统</td></tr>
+<tr><td>v2.0</td><td>多智能体框架、可视化控制台、SOP模板</td></tr>
+<tr><td>v1.3</td><td>初始版本、PC设备控制、MCP集成</td></tr>
+</table>
+</div>
+
+<br><br>
+<p style="text-align:center;color:#555;font-size:13px;">
+© 2026 HyperAgent v5.0 Ultimate &nbsp;|&nbsp; 承载体智能体系统
+</p>
+
+</div>
+</body>
+</html>

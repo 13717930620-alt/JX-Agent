@@ -1,0 +1,41 @@
+# Environment variables (contains API keys)
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Memory store
+mem_store/
+data/
+state_history/
+
+# Runtime data
+experience_store/
+work_records/
+checkpoints/
+*.db
+*.db-shm
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Runtime
+output.txt
+server_output.log
+state_snapshot.json
+
+# Uploads
+uploads/
+
+# Tesseract trained data
+*.traineddata

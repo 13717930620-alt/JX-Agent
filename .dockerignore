@@ -1,0 +1,15 @@
+node_modules
+.git
+*.md
+docs
+tests
+screenshots
+work_records
+state_history
+state_snapshot.json
+learning_data
+experience_store
+logs
+*.bat
+*.zip
+*.gz
