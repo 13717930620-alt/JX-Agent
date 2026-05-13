@@ -1,5 +1,14 @@
 # JingxuanAgent — Open-Source AI Agent Framework
 
+<div align="center">
+
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](package.json)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/13717930620-alt/jingxuanagent/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/13717930620-alt/jingxuanagent?style=social)](https://github.com/13717930620-alt/jingxuanagent)
+
+</div>
+
 > **I am a Chinese lawyer who loves AI. I don't know how to code.**
 >
 > I used publicly available AI coding assistants to translate my vision of what a true intelligent agent should be into a working framework.
@@ -72,8 +81,13 @@ JingxuanAgent/
 │   ├── atomic_executor/           # Tool executor
 │   ├── memory_engine/             # Memory + vector search
 │   └── device_abstraction/        # Device abstraction + security
+├── services/                      # Web search, config, tunnel
+├── extensions/                    # Productivity extensions
 ├── docs/                          # Documentation
-└── web/                           # Web console
+├── 安装程序.bat                   # Windows setup script
+├── 启动命令行.bat                 # CLI mode launcher
+├── 启动网页版.bat                 # Web UI launcher
+└── .github/                       # Issue templates
 ```
 
 ---
