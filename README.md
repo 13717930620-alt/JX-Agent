@@ -2,10 +2,11 @@
 
 > **I am a Chinese lawyer who loves AI. I don't know how to code.**
 >
-> This project is 30,000+ lines of code, 60+ modules, and 45+ built-in tools — all built by talking to Claude.
-> If a lawyer can build this without writing a single line of code manually, imagine what *we* can do together.
+> I used publicly available AI coding assistants to translate my vision of what a true intelligent agent should be into a working framework.
 >
-> **Everyone is welcome. Let's make this a true intelligent agent.**
+> This is a skeleton — a foundation. I am opening it up so that everyone who shares this vision can come together and make it real.
+>
+> **Everyone is welcome.**
 
 ---
 
@@ -61,30 +62,31 @@ JingxuanAgent/
 ├── JingxuanAgent_Config.js        # Configuration
 ├── JingxuanAgent_Learning.js      # Self-learning system
 ├── JingxuanAgent_Core/            # Core system
-│   ├── cc_mode/                # Query engine + tool system
-│   ├── cognitive_core/         # Cognitive framework (reasoning/evolution/patterns)
-│   ├── llm_adapter/            # 5 LLM adapters
-│   └── infra/                  # Infrastructure (logging/storage/security)
+│   ├── cc_mode/                   # Query engine + tool system
+│   ├── cognitive_core/            # Cognitive framework
+│   ├── llm_adapter/               # 5 LLM adapters
+│   └── infra/                     # Infrastructure
 ├── JingxuanAgent_Implementation/  # Implementation layer
-│   ├── conversation/           # Conversation engine
-│   ├── orchestrator/           # Task orchestration + checkpoints
-│   ├── atomic_executor/        # Tool executor + code tools
-│   ├── memory_engine/          # Memory engine + vector search
-│   └── device_abstraction/     # Device abstraction + safety engine
-├── docs/                       # Documentation
-├── tests/                      # Tests
-└── web/                        # Web console
+│   ├── conversation/              # Conversation engine
+│   ├── orchestrator/              # Task orchestration
+│   ├── atomic_executor/           # Tool executor
+│   ├── memory_engine/             # Memory + vector search
+│   └── device_abstraction/        # Device abstraction + security
+├── docs/                          # Documentation
+└── web/                           # Web console
 ```
 
 ---
 
 ## Why I Built This
 
-I am a lawyer. My job is words, not code. But I believe AI agents will change everything — how we work, how we create, how we solve problems.
+I am a lawyer. I spend my days reading, writing, and reasoning with words — not code.
 
-I didn't want to wait for someone else to build the agent I dreamed of. So I used AI to build it myself.
+But I have always believed that a truly intelligent machine should be more than a chatbot. It should be able to **see** your computer, **understand** what you need, **plan** how to do it, and **execute** the task with its own hands (or rather, its own tools). It should learn from experience, remember what it has learned, and grow smarter over time.
 
-**If I can do this, anyone can. And if everyone contributes, this can become something truly remarkable.**
+I couldn't write a single line of code to make this real. So I used AI coding assistants — the same tools available to anyone — to describe my vision, piece by piece, and let them help me build it.
+
+This is not a finished product. This is a **framework** — a skeleton — that captures my understanding of what an intelligent agent should be. The muscles, the nerves, the skin — those are for the community to add.
 
 ---
 
@@ -92,22 +94,44 @@ I didn't want to wait for someone else to build the agent I dreamed of. So I use
 
 I don't know how to code, so there is a lot of room for improvement:
 
-- Fix bugs and optimize code
-- Add new tools and features
-- Improve documentation
+- Fix bugs and optimize the code
+- Add new tools and capabilities
+- Improve the built-in AI engine
+- Write tests so we know it works
 - Port to more platforms
-- Write tests
+- Improve documentation
+- Suggest new architectural ideas
 - Anything you think would make it better
 
-Just open an Issue or submit a PR. **This project belongs to everyone.**
+This project is not "mine." It belongs to everyone who wants to see intelligent agents become real.
+
+**Open an Issue. Submit a PR. Fork it. Share it. Build on it.**
+
+---
+
+## The Vision
+
+A true intelligent agent should:
+
+1. **Understand** natural language, not just commands
+2. **Plan** complex tasks by breaking them down
+3. **Execute** actions safely on any device
+4. **Remember** everything it has experienced
+5. **Learn** from successes and failures
+6. **Evolve** its own capabilities over time
+7. **Collaborate** with humans and other agents
+
+JingxuanAgent is my attempt to build towards this vision. But no single person can finish it — especially not one who cannot code.
+
+**That is why I need you.**
 
 ---
 
 ## License
 
-MIT License — use it, modify it, share it.
+MIT License — use it, modify it, share it. Free for everyone, forever.
 
 ---
 
-> **A Chinese lawyer who cannot code built this with AI.**
-> **There is nothing you cannot do if you really want to.**
+> **A Chinese lawyer who cannot code built the skeleton.**
+> **Now the world can breathe life into it.**
